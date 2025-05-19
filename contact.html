@@ -148,5 +148,24 @@
       <p>&copy; All Rights Reserved | FNB App Academy 2025</p>
     </footer>
 
+    <script>
+
+      document.getElementById("contact-form").addEventListener("submit", function(e) {
+      e.preventDefault(); // Stop normal form submission
+
+      const form = e.target;
+      const formData = new FormData(form);
+
+      // Submit the form data to Form submit
+      fetch("https://formsubmit.co/fnbappacademyinfo@gmail.com", {
+        method: "POST",
+        body: formData
+      });
+
+      // Immediately redirect the user
+      window.location.href = "thanks.html";
+      });
+    </script>
+
   </body>
 </html>

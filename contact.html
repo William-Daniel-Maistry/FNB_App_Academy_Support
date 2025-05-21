@@ -74,13 +74,15 @@
     <main id="main-contact">
       <div id="contact-container">
 
-        <h1 class="center">Contact us</h1>
+        <h1 id="contactHeading" class="center">Contact us</h1>
         <p class="center">What issues do you have? Unsure about something?
           Please
           get in touch with our friendly support team by filling in the contact
           form below. We'd love to hear from you! 😊</p>
-        <form id="contact-form" action="https://formsubmit.co/fnbappacademyinfo@gmail.com"
-          method="POST">
+        <form id="contact-form"
+          action="https://william-daniel-maistry.github.io/FNB_App_Academy_Support/thanks.html"
+          onsubmit="openGmail()"
+          method="GET">
           <label for="firstname" class="required">First Name:
           </label>
           <input class="required" type="text" id="firstname" name="first-name"
@@ -134,11 +136,9 @@
             placeholder="Type your message here..."></textarea>
           <!-- Hidden fields -->
 
-          <!-- TODO: Add actual url to thanks page -->
-          <input type="hidden" name="_next"
-            value="https://william-daniel-maistry.github.io/FNB_App_Academy_Support/thanks.html">
           <input type="hidden" name="_captcha" value="false">
           <input type="hidden" name="_honey">
+
           <button type="submit">Submit</button>
         </form>
       </div>
@@ -148,24 +148,7 @@
       <p>&copy; All Rights Reserved | FNB App Academy 2025</p>
     </footer>
 
-    <script>
-
-      document.getElementById("contact-form").addEventListener("submit", function(e) {
-      e.preventDefault(); // Stop normal form submission
-
-      const form = e.target;
-      const formData = new FormData(form);
-
-      // Submit the form data to Form submit
-      fetch("https://formsubmit.co/fnbappacademyinfo@gmail.com", {
-        method: "POST",
-        body: formData
-      });
-
-      // Immediately redirect the user
-      window.location.href = "https://william-daniel-maistry.github.io/FNB_App_Academy_Support/thanks.html";
-      });
-    </script>
+    <script src="scripts/contact.js"></script>
 
   </body>
 </html>

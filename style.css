@@ -798,6 +798,92 @@ label[class="required"]::after {
 }
 
 
+
+
+
+
+/* ================ Confirmation Page ============ */
+
+#main-confirmation {
+  background: #2e90c6 url('images/itv-gif.gif') center / cover no-repeat fixed;
+  min-height: 70vh;
+}
+
+#confirmation-container {
+  width: 100%;
+  min-height: 70vh;
+  background: rgba(126, 124, 124, 0.5);
+  padding: var(--SPACING-MEDIUM) var(--SPACING-MEDIUM) 15vh;
+}
+
+#confirmation-container img {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  margin: auto;
+}
+
+#confirmation-container h1 {
+  text-shadow: -2px -2px 1px white;
+  font-size: var(--FS-MEDIUM);
+  margin-top: var(--SPACING-SMALL);
+}
+
+#confirmation-container p {
+  font-size: var(--FS-SMALL);
+  max-width: 800px;
+  margin: var(--SPACING-MEDIUM) auto;
+  font-weight: 600;
+  text-shadow: -2px -2px 1px white;
+}
+
+#confirmation-buttons {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--SPACING-MEDIUM);
+  column-gap: 10%;
+  justify-content: center;
+  align-items: center;
+}
+
+#confirmation-buttons>button,
+#confirmation-buttons>a {
+  width: 100%;
+  max-width: 400px;
+}
+
+#confirmation-buttons button {
+  padding: var(--SPACING-SMALL);
+  border-radius: 2em;
+  box-shadow: .25em .25em .125em #000;
+}
+
+#confirmation-buttons>button {
+  background-color: crimson;
+  color: papayawhip;
+}
+
+#confirmation-buttons>button:is(:hover, :focus) {
+  background-color: papayawhip;
+  color: crimson;
+}
+
+#confirmation-buttons>a>button {
+  background-color: var(--BUTTON-BG);
+  color: var(--BUTTON-COLOR);
+  width: 100%;
+  height: 100%;
+}
+
+#confirmation-buttons>a>button:is(:hover, :focus) {
+  background-color: var(--BUTTON-BG_HOVER);
+}
+
+#confirmation-buttons button:active {
+  filter: brightness(1.5);
+}
+
 /* ============ Thank you page ============= */
 
 #thanks-container h1 {
@@ -922,6 +1008,15 @@ label[class="required"]::after {
     font-size: var(--FS-SMALLEST);
   }
 
+  #confirmation-container h1 {
+    font-size: 5em;
+  }
+
+  #confirmation-container p {
+    font-size: 3em;
+  }
+
+
   #thanks-container h1 {
     font-size: var(--FS-LARGE);
   }
@@ -957,6 +1052,11 @@ label[class="required"]::after {
 
   p.answer {
     font-size: var(--FS-SMALL);
+  }
+
+
+  #confirmation-buttons {
+    flex-direction: row;
   }
 
 }

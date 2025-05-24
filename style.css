@@ -857,6 +857,7 @@ label[class="required"]::after {
   padding: var(--SPACING-SMALL);
   border-radius: 2em;
   box-shadow: .25em .25em .125em #000;
+  transition: .5s;
 }
 
 #confirmation-buttons>button {
@@ -882,6 +883,12 @@ label[class="required"]::after {
 
 #confirmation-buttons button:active {
   filter: brightness(1.5);
+}
+
+#confirmation-container #confirmation-email {
+  display: block;
+  margin-top: var(--SPACING-SMALL);
+  font-size: .5em;
 }
 
 /* ============ Thank you page ============= */
@@ -1014,6 +1021,10 @@ label[class="required"]::after {
 
   #confirmation-container p {
     font-size: 3em;
+  }
+
+  #confirmation-container #confirmation-email {
+    font-size: var(--FS-SMALLEST);
   }
 
 
